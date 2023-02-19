@@ -1,6 +1,10 @@
 package com.my.excercise.lambdaExcercise;
 
+import com.my.excercise.models.Product;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class LambdaExercises {
@@ -47,6 +51,25 @@ public class LambdaExercises {
 
         System.out.println(person.add(100, 20));
 
+    }
+
+    public static void comparatorLambda() {
+        List<Product> list=new ArrayList<Product>();
+
+        //Adding Products
+        list.add(new Product(1,"HP Laptop",25000f));
+        list.add(new Product(3,"Keyboard",300f));
+        list.add(new Product(2,"Dell Mouse",150f));
+
+        System.out.println("Sorting on the basis of name...");
+
+        // implementing lambda expression
+        Collections.sort(list,(p1, p2)->{
+            return p1.getName().compareTo(p2.getName());
+        });
+        for(Product p:list){
+            System.out.println(p.getId()+" "+p.getName()+" "+p.getPrice());
+        }
     }
 
     public static void printFormatted(String str, StringFunction format) {

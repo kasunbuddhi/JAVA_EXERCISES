@@ -11,5 +11,8 @@ public class JavaExercise {
 
         System.out.println(" ~~~ twoParameterLambda() ~~~");
         LambdaExercises.twoParameterLambda();
+
+        System.out.println(" ~~~ comparatorLambda() ~~~");
+        LambdaExercises.comparatorLambda();
     }
 }
