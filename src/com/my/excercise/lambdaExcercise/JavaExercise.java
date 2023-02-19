@@ -14,5 +14,8 @@ public class JavaExercise {
 
         System.out.println(" ~~~ comparatorLambda() ~~~");
         LambdaExercises.comparatorLambda();
+
+        System.out.println(" ~~~ streamLambda() ~~~");
+        LambdaExercises.streamLambda();
     }
 }

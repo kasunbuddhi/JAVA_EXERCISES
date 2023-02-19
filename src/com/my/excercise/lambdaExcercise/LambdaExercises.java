@@ -3,6 +3,7 @@ package com.my.excercise.lambdaExcercise;
 import com.my.excercise.models.Product;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
@@ -84,6 +85,27 @@ public class LambdaExercises {
         filtered_data.forEach(
                 product -> System.out.println(product.getName()+": "+product.getPrice())
         );
+    }
+
+    public static void streamLambda() {
+        List<String> alphabets = new ArrayList<>(Arrays.asList("aa", "bbb", "cat", "dog"));
+        alphabets.forEach(System.out::println);
+
+        System.out.println("~ filter and forEach ~");
+        alphabets.stream()
+                .filter(s -> s.startsWith("a"))
+                .forEach(System.out::println);
+
+        System.out.println("~ forEach and map ~");
+        alphabets.stream()
+                .mapToInt(s -> s.length())
+                .forEach(System.out::println);
+
+        int x = alphabets.stream()
+                .mapToInt(s -> s.length())
+                .sum();
+        System.out.println("~ sum and map : " + x);
+
     }
 
     public static void printFormatted(String str, StringFunction format) {
