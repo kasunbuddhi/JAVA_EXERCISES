@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class LambdaExercises {
 
@@ -58,8 +59,14 @@ public class LambdaExercises {
 
         //Adding Products
         list.add(new Product(1,"HP Laptop",25000f));
-        list.add(new Product(3,"Keyboard",300f));
-        list.add(new Product(2,"Dell Mouse",150f));
+        list.add(new Product(2,"Keyboard",300f));
+        list.add(new Product(3,"Dell Mouse",150f));
+        list.add(new Product(4,"Samsung A5",17000f));
+        list.add(new Product(5,"Iphone 6S",65000f));
+        list.add(new Product(6,"Sony Xperia",25000f));
+        list.add(new Product(7,"Nokia Lumia",15000f));
+        list.add(new Product(8,"Redmi4 ",26000f));
+        list.add(new Product(9,"Lenevo Vibe",19000f));
 
         System.out.println("Sorting on the basis of name...");
 
@@ -70,6 +77,13 @@ public class LambdaExercises {
         for(Product p:list){
             System.out.println(p.getId()+" "+p.getName()+" "+p.getPrice());
         }
+        System.out.println(" ~ using lambda to filter data ~");
+        // using lambda to filter data
+        Stream<Product> filtered_data = list.stream().filter(p -> p.getPrice() > 20000);
+
+        filtered_data.forEach(
+                product -> System.out.println(product.getName()+": "+product.getPrice())
+        );
     }
 
     public static void printFormatted(String str, StringFunction format) {
