@@ -37,6 +37,16 @@ public class LambdaExercises {
 
         Addable ad2=(int a,int b)->(a+b);
         System.out.println(ad2.add(100,200));
+
+        // pass multiple statements in lambda expression
+        Addable person = (a,b)-> {
+            Integer int1 = a + 20;
+            Integer int2 = int1 + b;
+            return int2;
+        };
+
+        System.out.println(person.add(100, 20));
+
     }
 
     public static void printFormatted(String str, StringFunction format) {
