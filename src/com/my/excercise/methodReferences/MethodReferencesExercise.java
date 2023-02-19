@@ -6,6 +6,9 @@ public class MethodReferencesExercise {
         System.out.println("Instance Method");
     }
 
+    /**
+     * Method reference to an instance method of an object
+     */
     public static void exercise1(){
         MethodReferencesExercise obj = new MethodReferencesExercise();
         MyInterface ref = obj::myMethod;
