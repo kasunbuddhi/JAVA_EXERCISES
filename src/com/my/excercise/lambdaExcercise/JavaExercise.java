@@ -9,6 +9,7 @@ public class JavaExercise {
         System.out.println(" ~~~ functionalInterfaceLambda() ~~~");
         LambdaExercises.functionalInterfaceLambda();
 
-
+        System.out.println(" ~~~ twoParameterLambda() ~~~");
+        LambdaExercises.twoParameterLambda();
     }
 }

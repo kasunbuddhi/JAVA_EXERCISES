@@ -31,6 +31,14 @@ public class LambdaExercises {
         System.out.println();
     }
 
+    public static void twoParameterLambda() {
+        Addable ad1=(a,b)->(a+b);
+        System.out.println(ad1.add(10,20));
+
+        Addable ad2=(int a,int b)->(a+b);
+        System.out.println(ad2.add(100,200));
+    }
+
     public static void printFormatted(String str, StringFunction format) {
         String result = format.run(str);
         System.out.println(result);
