@@ -5,6 +5,13 @@ import java.util.function.BiFunction;
 
 public class MethodReferencesExercise {
 
+    public MethodReferencesExercise(){
+    }
+
+    public MethodReferencesExercise(String say){
+        System.out.print(say);
+    }
+
     public void myMethod(){
         System.out.println("Instance Method");
     }
@@ -36,5 +43,13 @@ public class MethodReferencesExercise {
         for(String str: stringArray){
             System.out.println(str);
         }
+    }
+
+    /**
+     * Method reference to a constructor
+     */
+    public static void exercise4(){
+        MyInterfaceParam ref = MethodReferencesExercise::new;
+        ref.display("Hello World!");
     }
 }
