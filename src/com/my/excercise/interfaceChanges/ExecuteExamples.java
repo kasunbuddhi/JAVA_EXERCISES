@@ -6,6 +6,8 @@ public class ExecuteExamples {
         InterfaceChangesExercise obj = new InterfaceChangesExercise();
         obj.newMethod();
         obj.existingMethod("Java 8 is easy to learn");
+
+        MyChangesInterface.anotherNewMethod();
     }
 
 }

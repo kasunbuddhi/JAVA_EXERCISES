@@ -9,5 +9,12 @@ public interface MyChangesInterface {
         System.out.println("Newly added default method");
     }
 
+    /**
+     * static method
+     */
+    static void anotherNewMethod(){
+        System.out.println("Newly added static method");
+    }
+
     void existingMethod(String str);
 }
