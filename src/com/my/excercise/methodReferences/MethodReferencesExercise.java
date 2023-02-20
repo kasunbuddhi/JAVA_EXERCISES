@@ -6,6 +6,7 @@ import java.util.function.BiFunction;
 public class MethodReferencesExercise {
 
     public MethodReferencesExercise(){
+        System.out.println("without param constructor");
     }
 
     public MethodReferencesExercise(String say){
@@ -51,5 +52,11 @@ public class MethodReferencesExercise {
     public static void exercise4(){
         MyInterfaceParam ref = MethodReferencesExercise::new;
         ref.display("Hello World!");
+
+        System.out.println("\nwithout param");
+
+        /** without param */
+        MyInterface ref2 = MethodReferencesExercise::new;
+        ref2.display();
     }
 }
